@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "server": "cd server && npm run start",
+    "build": "concurrently  -n 'server,client' -c 'red,green' \"cd server && npm run build\" \"cd client && npm run build\"",
+    "client": "cd client && npm run dev",
+    "start": "concurrently  -n 'server,client' -c 'red,green' \"npm run server\" \"npm run client\"",
+    "getpkg": "concurrently -n 'server,client' -c 'red,green' \"cd server && npm i\" \"cd ..\" \"cd client && npm i\"",
+    "test-server": "cd server && npm run test",
+    "test-client": "cd client && npm run testing",
+    "test": "concurrently -n 'server,client' -c 'red,green' \"cd server && npm run test\" \"cd client && npm run test\"",
+    "lint": "concurrently -n 'server,client' -c 'red,green' \"cd server && npm run lint\" \"cd client && npm run lint\"",
+    "export-client" : "cd client && npm run export"
+  },
+  "devDependencies": {
+    "puppeteer": "^13.4.1"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

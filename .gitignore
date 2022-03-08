@@ -1,0 +1,10 @@
+*/node_modules
+node_modules
+
+*/coverage
+
+*/*.env*
+
+# static folder for DigitalOcean App Platform
+_static
+client/_static
