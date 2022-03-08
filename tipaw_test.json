@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "c42b131e-577b-41d6-a34a-ef22d67c7f2b",
+		"name": "tipaw_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fetch all users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    users {\n        firstName\n        lastName\n        phoneNumber\n        email\n        password\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation LoginEx {\n  login(email: \"new@email.com\", password: \"123\") {\n    token\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:4000",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation CreateUser {\n  createUser(email: \"testing@email.com\", password: \"123\",firstName:\"first\",lastName:\"last\",phoneNumber:\"1234567\") {\n    token\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:4000",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation DeleteUser {\n  deleteUserByEmail(email: \"testing@email.com\") {\n    email\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:4000",
+					"host": [
+						"localhost"
+					],
+					"port": "4000"
+				}
+			},
+			"response": []
+		}
+	]
+}
