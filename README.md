@@ -27,7 +27,7 @@ In this project we have used following dependencies
 - ✅ A way for users to login (session management) 
 - Building a design system for the UI components
 - ✅ A clear project architecture 
-- Deploy the applications 
+- ✅ Deploy the applications 
 
 
 ## Live Url
@@ -77,6 +77,6 @@ npm run test-client
 ## Postman collection :
 
 ```
-File available in root directory with name (Fantastic_engine.postman_collection.json)
+File available in root directory with name (tipaw.postman_collection.json)
 ```
 
